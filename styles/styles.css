@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*======================= text formatting =======================*/
+/*recolor the button links and remove underlines*/
+.header_wrapper, .StoryProducts_wrapper{
+  background-color: #E0E0E0;
+}
+/*======================= image formatting =======================*/
+header h1 img{
+    width : 100px
+}
+/*======================= button formatting =======================*/
+.home_button, .contact_button{
+    display: inline-block;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 200ms ease;
+}
+
+.home_button{
+    background-color: blue;
+    color: antiquewhite;
+    /*add bordercolor*/
+}
+.home_button:hover{
+    background-color: aqua;
+    color: antiquewhite;
+    /*add bordercolor*/
+}
+.contact_button{
+    background-color: aqua;
+    color: antiquewhite;
+    /*add bordercolor*/
+}
+.contact_button:hover{
+    background-color: blue;
+    color: antiquewhite;
+    /*add bordercolor*/
+}
+/*======================= Layout =======================*/
+
+header{
+    height: 150px;
+    display: flex;
+    flex-direction:column;
+    padding:10px;
+}
+
+.buttons_wrapper{
+    display: inline-flex;
+    flex-direction: column;
+    
+}
+.StoryProducts_wrapper{
+  background-color: #ffffff;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  
+}
+.story,.products{
+    height: 50px;
+    background-color: #808080; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: sans-serif;
+}
