@@ -1,74 +1,243 @@
+/* -------------------------base styles  --------------------------------*/
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-/*======================= text formatting =======================*/
-/*recolor the button links and remove underlines*/
-.header_wrapper, .StoryProducts_wrapper{
-  background-color: #E0E0E0;
-}
-/*======================= image formatting =======================*/
-header h1 img{
-    width : 100px
-}
-/*======================= button formatting =======================*/
-.home_button, .contact_button{
-    display: inline-block;
-    text-transform: uppercase;
-    border: 2px solid transparent;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 200ms ease;
-}
-
-.home_button{
-    background-color: blue;
-    color: antiquewhite;
-    /*add bordercolor*/
-}
-.home_button:hover{
-    background-color: aqua;
-    color: antiquewhite;
-    /*add bordercolor*/
-}
-.contact_button{
-    background-color: aqua;
-    color: antiquewhite;
-    /*add bordercolor*/
-}
-.contact_button:hover{
-    background-color: blue;
-    color: antiquewhite;
-    /*add bordercolor*/
-}
-/*======================= Layout =======================*/
-
-header{
-    height: 150px;
-    display: flex;
-    flex-direction:column;
-    padding:10px;
-}
-
-.buttons_wrapper{
-    display: inline-flex;
-    flex-direction: column;
-    
-}
-.StoryProducts_wrapper{
-  background-color: #ffffff;
-  padding: 12px;
-  display: flex;
-  flex-direction: column;
+    box-sizing:border-box;
   
 }
-.story,.products{
-    height: 50px;
-    background-color: #808080; 
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    padding: 10px;
+}
+
+main {
+    width: 100%;
+    max-width: 100%
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #333;
+    padding: 15px;
+    flex-shrink: 0;
+}
+
+/* ------------------------- top bar  --------------------------------*/
+
+.top-bar {
+    display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 20px;
+    color: #666;
+}
+
+.window-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.window-controls span {
+    width: 20px; 
+    height: 20px;
+    border:2px solid #333;
+    border-radius: 50%;
+    display: block;
+}
+
+.window-controls span:last-child {
+    background-color: #e3f2fd;
+}
+
+/* ------------------------- Branding  --------------------------------*/
+
+
+.brand {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.brand img {
+    border: 2px solid #333;
+    border-radius: 50%;
+    padding:10px;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.brand span {
+    font-size: 24px;
+}
+
+/* ------------------------- Nav bar  --------------------------------*/
+
+
+.buttons_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    margin-bottom: 30px;
+}
+
+.home_button, .contact_button {
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    border: 2px solid #333;
+}
+
+.home_button {
+    background-color: #2196F3;
     color: white;
-    font-family: sans-serif;
+    border-bottom: none;
+}
+
+.contact_button {
+    background-color: white;
+    color: #333;
+}
+
+/* ------------------------- home page  --------------------------------*/
+
+
+.StoryProducts_wrapper {
+    margin-bottom: 40px;
+}
+
+.story, .services {
+    margin-bottom: 20px;
+}
+
+.story h2, .services h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.story p, .services ul, .services p {
+    line-height: 1.5;
+    color: #333;
+}
+
+.services ul {
+    padding-left: 20px;
+}
+
+/* ------------------------- Contact form  --------------------------------*/
+
+
+.contact-form {
+    width: 100%;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-row{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.form-row label {
+    width: 100px;
+    text-align: right;
+    margin-right: 10px;
+    color: #666;
+    font-size: 14px;
+    padding-top: 4px;
+}
+
+.form-row input, .form-row textarea {
+    width: 200px;
+    flex: none;
+    padding: 3px;
+    border: 2px solid #333;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.form-row textarea {
+    resize: none;
+    height: 60px;
+}
+
+.form-submit {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+    margin-left: 110px;
+}
+
+.form-submit input[type="submit"] {
+    padding: 3px 20px;
+    border: 2px solid #999;
+    background-color: #e8e8e8;
+    font-size: 12px;
+    cursor: pointer;
+    width: 100px;
+}
+
+/* ------------------------- footer  --------------------------------*/
+
+
+footer {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+footer a {
+    color: #666;
+}
+
+/* ------------------------- Media Queries  --------------------------------*/
+
+
+@media (min-width: 480px) {
+    main {
+        padding:15px 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .form-row label {
+        text-align: right;  
+  }
+  
+  .form-submit {
+        margin-left: 110px;  
+  }
+  
+  .form-submit input[type="submit"] {
+    width: 100px;        
+  }
+}
+
+@media (min-width: 600px) {
+
+    main {
+        padding: 20px 40px;
+    }
+  
+  .buttons_wrapper {
+        width: 120px;        
+  }
+  
+  .form-row input, 
+  .form-row textarea {
+        width: 200px;       
+        flex: none;         
+  }
 }

@@ -8,37 +8,54 @@
     </head>
 
     <body>
-        <main>
-
-           <header>
-                <h1> <img src="introrealm logo.png" alt="Introrealm studios with transparent globe"/>Contact page</h1>
-                
-                <!--insert logo -->
-                <nav>
-                    <div class="buttons_wrapper">                     
-                        <div class="home_button">
-                            <a href="index.html">Home</a>
+            <main>
+                <div class="top-bar">
+                    <span>Home page</span>
+                    <div class="window-controls">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>      
+                </div>
+                <header>
+                    <div class="header_wrapper">
+                        <div class="brand">
+                            <img src="introrealm logo.png" alt="Introrealm studios with transparent globe"/>
+                            <span>Contact Page</span>
                         </div>
-                        <div class="contact_button">
-                            <a href="contacts.html">Contact</a>
-                        </div>
+                        <nav>
+                            <div class="buttons_wrapper">
+                                <a href="index.html" class="home_button">Home</a>
+                                <a href="contacts.html" class="contact_button">Contact</a>
+                            </div>
+                        </nav>
                     </div>
-                </nav>
-            </header>
-
-            <form>
-                <label for="name">Your name:</label>
-                <input name="name" id="customer_name" value="" size="20"> </br>
-                <label for="email">Your email:</label>
-                <input type="email" id="customer_email" name="email" size="20"> </br>
-                <label for="message">Your message:</label>
-                <textarea id="message" name="message" rows="4" cols="20"></textarea></br>
-                <input type="submit" value="Submit"
+                </header> 
+            <form class="contact-form">
+                <div class="form-row">
+                    <label for="customer_name">Your name:</label>
+                    <input type="text" name="name" id="customer_name" size="20">
+                </div>
+                
+                <div class="form-row">
+                    <label for="customer_email">Your email:</label>
+                    <input type="email" id="customer_email" name="email" size="20">
+                </div>
+                
+                <div class="form-row">
+                    <label for="message">Your idea:</label>
+                    <textarea id="message" name="message" rows="4" cols="20"></textarea>
+                </div>
+                
+                <div class="form-submit">
+                    <input type="submit" value="Submit">
+                </div>
             </form>
-            
+
             <footer>
                 <p>Created by McKenna Morrison-Ripley</p>
                 <p>follow us on <a href="https://www.linkedin.com/in/mckennamorrisonripley/">LinkedIn</a> </p>
             </footer>
         </main>
     </body>
+</html>
